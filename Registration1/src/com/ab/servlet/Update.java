@@ -6,10 +6,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+@WebServlet("/update")
 public class Update extends HttpServlet{
 
 	@Override
@@ -18,24 +21,25 @@ public class Update extends HttpServlet{
 		try {
 			String name;
 			int age;
-			int mob;
+			String mob;
 			String email;
 			String addr;
 			
 			name=req.getParameter("ename");
 			age=Integer.parseInt(req.getParameter("eage"));
-			mob=Integer.parseInt(req.getParameter("emob"));
 			email=req.getParameter("eemail");
-			addr=req.getParameter("eaddr");
+			addr=req.getParameter("eaddress");
+			
+			HttpSession session=req.getSession();
+			mob= session.getAttribute("mob").toString();
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root","root");
-			PreparedStatement ps=con.prepareStatement("UPDATE DATA SET NAME=?,AGE=?,MOBILE=?,EMAIL=?,ADDRESS=? WHERE MOBILE=?");
+			PreparedStatement ps=con.prepareStatement("UPDATE DATA SET NAME=?,AGE=?,EMAIL=?,ADDRESS=? WHERE MOBILE='"+mob+"'");
 			ps.setString(1, name);
 			ps.setInt(2,age);
-			ps.setInt(3,mob);
-			ps.setString(4,email);
-			ps.setString(5, addr);
+			ps.setString(3,email);
+			ps.setString(4, addr);
 			
 			int result=ps.executeUpdate();
 			

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="retrive.jsp" method="post">
+	<form action="retrive" method="post">
 	<h1>Login Successful</h1>
 	
 	<%
@@ -24,7 +24,7 @@
 	
 	Class.forName("com.mysql.jdbc.Driver");
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root","root");
-		PreparedStatement ps=con.prepareStatement("SELECT * FROM DATA WHERE 'MOBILE="+mbl+"'");
+		PreparedStatement ps=con.prepareStatement("SELECT * FROM DATA WHERE MOBILE='"+mbl+"'");
 		ResultSet rs=ps.executeQuery();
 		
 	%>
