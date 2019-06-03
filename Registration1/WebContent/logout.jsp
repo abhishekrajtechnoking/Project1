@@ -7,6 +7,7 @@
 <title></title>
 </head>
 <body>
+<% session.invalidate(); %>
 <form action="logout">
 <h1>Logout Successfull</h1>
 	<a href="login.jsp">Login</a>
