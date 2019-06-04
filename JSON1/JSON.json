@@ -1,0 +1,46 @@
+{
+  "passengers": [
+    {
+      "ffnumber": "",
+      "fare": {
+        "yqtax": 1,
+        "airtransfee": 1,
+        "transactionfee": 1,
+        "tax": 1,
+        "basefare": 1,
+        "additionaltxnfeepub": 1,
+        "additionaltxnfeeofrd": 0
+      },
+      "countryname": "india",
+      "contactno": "8818869297",
+      "lastname": "kumar",
+      "title": "mr",
+      "city": "karmwari",
+      "paxtype": "1",
+      "dateofbirth": "1998-02-02t00:00:00",
+      "email": "naveensinghg15@gmail.com",
+      "Seat": {
+        "Description": "",
+        "Code": ""
+      },
+      "FFAirline": "",
+      "Gender": 1,
+      "Meal": {
+        "Description": "2",
+        "Code": "VCC6"
+      },
+      "PassportExpiry": "",
+      "FirstName": "Naveen",
+      "CountryCode": "IN",
+      "IsLeadPax": true,
+      "PassportNo": "",
+      "AddressLine1": "KARMWARI",
+      "AddressLine2": "KARMWARI"
+    }
+  ],
+  "TokenId": "473ca87a-fc0f-4fc5-83f1-1f82c5c2687a",
+  "ResultIndex": "OB15",
+  "TraceId": "39420872-5b2a-40e6-a503-5968a8d2a9ef",
+  "ClientId": "ApiIntegrationNew",
+  "EndUserIp": "192.168.1.9"
+}
