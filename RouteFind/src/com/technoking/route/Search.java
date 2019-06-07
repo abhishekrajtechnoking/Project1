@@ -10,10 +10,10 @@ public class Search {
 	public static void main(String[] args) {
 		
 		try {
-			URL url=new URL("http://devapp.ticketgoose.com/bookbustickets/rest/json/2.0/search?username=javatest&password=123456&trav elDate=2015-03-10&fromStationCode=72&toStationCode=76");
+			URL url=new URL("http://devapp.ticketgoose.com/bookbustickets/rest/json/2.0/search?username=javatest&password=123456&travelDate=2019-07-10&fromStationCode=72&toStationCode=76");
 			HttpURLConnection con=(HttpURLConnection)url.openConnection();
 			con.setDoOutput(true);
-			con.setRequestMethod("GET");
+			con.setRequestMethod("POST");
 			con.setRequestProperty("Content-Type", "application/json");
 			
 			BufferedReader br=new BufferedReader(new InputStreamReader(con.getInputStream()));
