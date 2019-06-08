@@ -7,7 +7,7 @@
 <title>search</title>
 </head>
 <body>
-	<form action="search" method="post">
+	<form action="search.jsp" method="post">
 		<table>
 			<tr>
 				<th>From</th>
