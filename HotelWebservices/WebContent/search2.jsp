@@ -37,7 +37,7 @@ java.util.Date" %>
 		ResultSet rs=ps.executeQuery();
 		
 	
-		if(rs.next()==true) {
+		if(rs.last()==true) {
 		 tokenId=rs.getString(1);
 		} 
 		
@@ -47,7 +47,7 @@ java.util.Date" %>
 		JSONObject jo=new JSONObject();
 		
 	 	jo.put("ClientId", "ApiIntegrationNew");
-	 	jo.put("TokenId", "736a2003-3c8e-43b8-bc69-72c193a5f7a9");
+	 	jo.put("TokenId", tokenId);
 	 	jo.put("EndUserIp", "171.79.62.10");
 	 	jo.put("CountryCode", countryCode);
 		

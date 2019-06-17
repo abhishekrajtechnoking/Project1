@@ -36,7 +36,7 @@ org.json.simple.JSONObject" %>
 			countryCode=rs1.getString(1);
 		}
 		
-		if(rs2.next()==true){
+		if(rs2.last()==true){
 			tockenId=rs2.getString(1);
 		}
 		

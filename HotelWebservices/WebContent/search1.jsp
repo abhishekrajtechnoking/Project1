@@ -101,9 +101,15 @@
 			</tr>
 			
 			<tr>
-				<th>Room Guest</th>
+				<th>Total number of Guest</th>
 				<td>
-					<input type="text" placeholder="" name="rGust">
+					<input type="text" placeholder="" name="nadlt">
+				</td>
+				<td>
+					<input type="text" placeholder="" name="nchld">
+				</td>
+				<td>
+					<input type="text" placeholder="" name="chldAge">
 				</td>
 			</tr>
 		</table>
