@@ -62,6 +62,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 			String trcId="";
 			String hCode="";
 			int resIndx=0;
+			int nRoom=Integer.parseInt(request.getParameter("nRoom"));
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn1=DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel","root","root");
@@ -202,6 +203,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 									<img alt="" src="<%=img%>">
 								</td>
 							</tr>
+							<input type="hidden" name="room" value="<%=nRoom%>">
 							</table>
 						<% 
 					
@@ -215,7 +217,6 @@ tr:nth-child(even){background-color: #f2f2f2}
 		  }
 		  
 		%>
-		
 		
 	</form>
 </body>

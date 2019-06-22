@@ -66,7 +66,6 @@ java.util.Date" %>
 		} 
 	  
 	  nRoom=Integer.parseInt(request.getParameter("rooms"));
-	  session.setAttribute("nRoom", nRoom);
 	  adlt=Integer.parseInt(request.getParameter("adlt"));
 	  chld=Integer.parseInt(request.getParameter("chld"));
 	  
@@ -229,6 +228,7 @@ JSONObject joSearch=new JSONObject();
 		<input type="hidden" name="resultIndex" value="<%=resIndx %>">
 		<input type="hidden" name="traceId" value="<%=tracId %>">
 		<input type="hidden" name="hCode" value="<%=hCode %>">
+		<input type="hidden" name="nRoom" value="<%=nRoom %>">
 		
 		<td><button>Book</button></td>
 		</tr>

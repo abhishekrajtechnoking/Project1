@@ -49,6 +49,7 @@ java.util.Date" %>
 			String trcId="";
 			String hCode="";
 			int resIndx=0;
+			int nRoom=Integer.parseInt(request.getParameter("room"));
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn1=DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel","root","root");
@@ -117,7 +118,7 @@ java.util.Date" %>
 		 for(int i=0;i<ja1.size();i++){
 			 JSONObject hrdJo=(JSONObject)ja1.get(i);
 			 
-			// out.println(hrdJo);
+			 out.println(hrdJo);
 			 
 			 String roomIndex=(String)hrdJo.get("RoomIndex").toString();
 			 String roomTypeCode=(String)hrdJo.get("RoomTypeCode");
@@ -153,6 +154,9 @@ java.util.Date" %>
 				 String servTax=(String)priceJo.get("ServiceTax").toString();
 				 String servChrg=(String)priceJo.get("ServiceCharge").toString();
 				 String tlgst=(String)priceJo.get("TotalGSTAmount").toString();
+				 String agntCom=(String)priceJo.get("AgentCommission").toString();
+				 String agntMrk=(String)priceJo.get("AgentMarkUp").toString();
+				 String tds=(String)priceJo.get("TDS").toString();
 				 
 				 JSONArray ja3=(JSONArray)hrdJo.get("CancellationPolicies");
 				 for(int k=0;k<ja3.size();k++){
@@ -200,6 +204,24 @@ java.util.Date" %>
 					</td>
 					<td><%=index%></td>
 					
+					<input type="hidden" value="<%=roomIndex%>" name="roomIndex">
+					<input type="hidden" value="<%=roomTypeCode%>" name="roomTypeCode">
+					<input type="hidden" value="<%=roomTypeName%>" name="roomTypeName">
+					<input type="hidden" value="<%=ratePlanCode%>" name="ratePlanCode">
+					<input type="hidden" value="<%=curCode%>" name="curCode">
+					<input type="hidden" value="<%=rPrice%>" name="roomPrice">
+					<input type="hidden" value="<%=chChrg%>" name="chldChrg">
+					<input type="hidden" value="<%=othCharg%>" name="othChrg">
+					<input type="hidden" value="<%=disc%>" name="discount">
+					<input type="hidden" value="<%=eGustChrg%>" name="eGustChrg">
+					<input type="hidden" value="<%=pubsPrc%>" name="publPrice">
+					<input type="hidden" value="<%=pubsPrcRound%>" name="pubsPrcRound">
+					<input type="hidden" value="<%=ofrPrc%>" name="ofrPrc">
+					<input type="hidden" value="<%=ofrPrcRound%>" name="ofrPrcRound">
+					<input type="hidden" value="<%=agntCom%>" name="agntCom">
+					<input type="hidden" value="<%=agntMrk%>" name="agntMark">
+					<input type="hidden" value="<%=servTax%>" name="servTax">
+					<input type="hidden" value="<%=tds%>" name="tds">
 					
 				</tr>
 			 	
@@ -222,6 +244,9 @@ java.util.Date" %>
 			 <input type="hidden" value="<%=resIndx%>" name="resIndx">
 			 <input type="hidden" value="<%=hCode%>" name="hotCode">
 			 <input type="hidden" value="<%=trcId%>" name="tracId">
+			 <input type="hidden" value="<%=nRoom%>" name="noRoom">
+			 
+			 
 			 <%
 		 			
 		 		
